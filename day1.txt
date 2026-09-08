@@ -1,0 +1,65 @@
+1. Employee Salary
+name = input()
+Basic,hra,da,prof_tax = map(float, input().split())
+print("Employee Name: ", name)
+gross_salary = Basic + hra + da
+net_salary = gross_salary - prof_tax
+print(f"Gross Salary: {gross_salary:.2f}")
+print(f"Net Salary: {net_salary:.2f}")
+
+2. Online Order Bill
+name=input()
+Qty,Unit_price,Discount_per = input().split()
+Qty = int(Qty)
+Unit_price = float(Unit_price)
+Discount_per = float(Discount_per)
+print("Product: ", name)
+print("Quantity: ", Qty)
+Total_cost = Qty * Unit_price
+Discount_amount = Total_cost * Discount_per / 100
+Final_amount = Total_cost - Discount_amount
+print(f"Total Cost: {Total_cost:.2f}")
+print(f"Discount: {Discount_amount:.2f}")
+print(f"Final Amount: {Final_amount:.2f}")
+
+3. Marks Total and Average
+name = input()
+pro,maths,data = map(int, input().split())
+print("Student Name: ",name)
+print("Programming: ",pro)
+print("Mathematics: ",maths)
+print("Database: ",data)
+total = pro + maths + data
+average = total/3
+print("Total Marks: ",total)
+print(f"Average: {average:.2f}")
+
+4. Electricity Bill
+name = input()
+previous_reading,current_reading,cost_per_unit = input().split()
+previous_reading = int(previous_reading)
+current_reading = int(current_reading)
+cost_per_unit = float(cost_per_unit)
+print("Customer Name: ",name)
+units_consumed = current_reading - previous_reading
+electricity_charge = units_consumed * cost_per_unit
+print("Units Consumed: ",units_consumed)
+print(f"Electricity Charge: {electricity_charge:.2f}")
+
+5. Bank Transaction Details
+name = input()
+account_number = input()
+balance = float(input())
+transaction_type = input()
+amount = float(input())
+
+if transaction_type == "Deposit":
+    updated_balance = balance + amount
+else:
+    updated_balance = balance - amount
+
+print("Account Holder:", name)
+print("Account Number:", account_number)
+print(f"Previous Balance: {balance:.2f}")
+print(f"Transaction Amount: {amount:.2f}")
+print(f"Updated Balance: {updated_balance:.2f}")

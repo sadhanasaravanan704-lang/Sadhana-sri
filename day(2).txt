@@ -1,0 +1,45 @@
+
+1. odd or even
+n=int(input())
+x=['even','odd']
+print(x[n % 2])
+
+2. Hundreads,Tens,Ones
+n=int(input())
+hundread = n//100
+tens = (n//10) % 10
+ones = n%10
+print(hundread)
+print(tens)
+print(ones)
+
+3.Hours,Minutes,Seconds
+total = int(input())
+hours = total//3600
+minutes = (total % 3600)//60
+seconds = total % 60
+print(hours,minutes,seconds)
+
+4. Login 
+name=input()
+password = input()
+status = input()
+role = input()
+x = [name,password,status,role]
+print(x)
+y=['Login failed','Login successful']
+print(y[(name == 'admin' and password == '12345')])
+
+5. Eligibility
+name = input()
+age = int(input())
+cgpa = float(input())
+attendance = int(input())
+arrears = int(input())
+programming_language = input()
+coding_score = int(input())
+communication_score = int(input())
+x=['not attend', 'attend']
+print(x[(age >= 18 and cgpa >=7.0 and attendance >= 75 and arrears==0 and coding_score >= 60 and communication_score >=50)])
+
+

@@ -1,0 +1,33 @@
+1. Odd or Even using if else in single line
+n=int(input())
+print('even' if n%2==0 else 'odd')
+
+2. condition
+n=int(input())
+if (n%2 != 0):
+  print("Rakshana")
+elif( 7<=n<=15):
+    print("Rakshna")
+elif(25<=n<=40):
+    print("Rakshna")
+elif(n>100):
+    print ("Rakshna")
+else:
+    print("Krce")
+
+3. if else in single line
+n=int(input())
+print("Rakshana" if 7 <= n <= 15 else "Rakshana" if n % 2 != 0 else "KRCE")
+
+4. direction
+n=int(input())
+directions = ["North", "East", "South", "West"]
+print(directions[n % 4])
+
+5. Amount calculation for distance
+X, Y, Z = map(int, input().split())
+
+if Z <= 50:
+    print(X)
+else:
+    print(X + (Z - 50) * Y)

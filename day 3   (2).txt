@@ -1,0 +1,78 @@
+1. Eligiblity and Condition checking
+views = int(input())
+retention = int(input())
+original = input()
+enrolled = input()
+copyright = input()
+
+if (copyright == 'true'):
+    print("Not Eligible")
+elif(enrolled == 'false'):
+    print("Not Eligible")
+elif(original == 'false'):
+    print("Not Eligible")
+elif(views >= 100000 and retention >=50):
+    print("Eligible - Premium Payout")
+elif(views >= 100000 and retention < 50):
+    print("Eligible - Standard Payout")
+elif(views >= 10000 and retention >=60):
+    print("Eligible - Standard Payout")
+elif(views >= 10000 and retention < 60):
+    print("Eligible - Minimum Payout")
+else:
+    print(" Not Eligible - Below Threshold")
+
+2. Bus Fare
+distance = float(input())
+category = input()
+has_pass = input()
+is_peak_hour = input()
+is_central_route = input()
+
+if distance <= 5:
+    fare = 10
+elif distance <= 15:
+    fare = 10 + (distance - 5) * 2
+else:
+    fare = 30 + (distance - 15) * 3
+
+if category == "Student":
+    if has_pass == "true":
+        fare = fare * 0.5
+elif category == "Senior Citizen":
+    fare = fare * 0.7
+
+if is_peak_hour == "true" and is_central_route == "true":
+    fare = fare + 5
+
+print(f"{fare:.2f}")
+
+3. Bill Calculator
+food_amount = int(input())
+day = input()
+membership = input()
+
+gst = food_amount * 0.05
+amount = food_amount + gst
+
+if day == "Saturday" or day == "Sunday":
+    service_charge = food_amount * 0.10
+else:
+    service_charge = food_amount * 0.05
+
+amount = amount + service_charge
+
+if membership == "Gold":
+    amount = amount * 0.92
+elif membership == "Silver":
+    amount = amount * 0.96
+
+if amount > 3000:
+    cashback = amount * 0.02
+else:
+    cashback = 0
+
+print(f"{amount:.2f}")
+print(f"{cashback:.2f}")
+
+4.

@@ -1,0 +1,78 @@
+4. Bank Loan Eligibility
+age=int(input())
+credit_score= int(input())
+monthly_income = int(input())
+existing_emi = int(input())
+loan_amount=int(input())
+if 21< age >65:
+    print("Rejected")
+    print("Not Eligible")
+elif credit_score<600:
+    print("Rejected")
+    print("Credit score too low")
+elif  600< credit_score <=750:
+    if monthly_income >=50000 and existing_emi < monthly_income*0.30:
+        print("Approved")
+        print("Interest Rate: 12%")
+    else:
+        print("Approved")
+        print("Interest Rate: 14%")
+        print("Co-applicant Required")
+else:
+    if loan_amount <= 10 * monthly_income:
+        print("Approved")
+        print("Interest Rate: 8%")
+    elif loan_amount<= 20 * monthly_income:
+        print("Approved")
+        print("Interest Rate: 10%")
+    else:
+        print("Regected")
+        print("Loan amount exceeds eligible limit")
+
+5. Mobile Recharge Plan
+amount = int(input())
+data_required = int(input())
+is_5g_phone = input()
+if amount < 100:
+    print("Invalid - Minimum recharge is 100")
+elif 100 <= amount < 300:
+    if data_required <= 2:
+        print("Basic plan")
+    else:
+        print("Insufficient plan for data need")
+elif 300 <= amount < 700:
+    if data_required <= 20:
+        print("Standard Plan")
+    else:
+        print("Insufficent plan for data need")
+else:
+    if is_5g_phone == "true":
+        print("5G Unlimited Plan Activated - 84 days")
+    else:
+        print("4G unlimited plan - 84 days")
+
+6. Mobile App Storage
+ram_gb=int(input())
+storage_gb=float(input())
+android_version = int(input())
+processor_type = input()
+is_battery_saver = input()
+if ram_gb < 4:
+    print("Incompatible - Insufficient RAM")
+elif storage_gb < 2:
+    print("Incompatible - Insufficient Storage")
+elif android_version < 10:
+    print("Incompatible - Update OS Required")
+else:
+    if is_battery_saver =="true":
+        print("Power Saver Mode")
+    elif processor_type == "Flagship":
+        print("High Performance Mode")
+    elif processor_type == "Mid-range":
+        print("Balanced Mode")
+    else:
+        if ram_gb >= 6:
+            print("Power Saver Mode")
+        else:
+            print("Compatible - Low Performance Warning")
+    

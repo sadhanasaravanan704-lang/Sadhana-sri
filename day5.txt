@@ -1,0 +1,218 @@
+1. Digit Counter
+year = int(input())
+if (year % 4 == 0 and year % 100 != 0 ) or year % 400 == 0:
+    print("Leap Year")
+else:
+    print("Not a Leap Year")
+
+2.Sum of digits
+n=int(input())
+sign=1
+if n<0:
+    sign=-1
+n=abs(n)
+sum=0
+while n!=0:
+    a=n%10
+    sum=sum+a
+    n=n//10
+print(sum)
+
+3.Sum of Odd and Even Digits
+n=int(input())
+sign=1
+if n<0:
+    sign = -1
+n=abs(n)
+es=0
+os=0
+while n != 0:
+    a=n%10
+    if n%2==0:
+        es=es+a
+    else:
+        os=os+a
+    n=n//10
+print(os,es)
+
+4. Maximum and Minimum
+n=int(input().strip())
+maxdigit=0
+mindigit=9
+n=abs(n)
+if n==0:
+    maxdigit=0
+    mindigit=0
+else:
+    while n != 0:
+        a=n%10
+        if a>maxdigit:
+            maxdigit=a
+        if a<mindigit:
+            mindigit= a
+        n=n//10
+print(maxdigit,mindigit)
+
+5. Sum of first and last digit
+n=abs(n)
+last=n%10
+first=n
+while first >= 10:
+    first = first//10
+print(first+last)
+
+6.Reverse a Number and Preserve the Sign
+n=int(input())
+sign=1
+if n<0:
+    sign=-1
+n=abs(n)
+x=0
+if n<0:
+    sign = -1
+while n != 0:
+    a=n%10
+    x=x*10 + a
+    n=n//10
+print(x*sign)
+
+7.Palindrome
+n = int(input())
+
+if n < 0:
+    print("false")
+else:
+    original = n
+    reverse = 0
+
+    while n != 0:
+        digit = n % 10
+        reverse = reverse * 10 + digit
+        n = n // 10
+
+    if original == reverse:
+        print("true")
+    else:
+        print("false")
+
+8. Print inorder and reverse order
+n=int(input())
+for i in range(1,n+1):
+    print(i, end=" ")
+for i in range(n,0,-1):
+    print(i,end=" ")
+
+9.Even Odd Detecter
+n=int(input())
+if n%2==0:
+    print("Even")
+else:
+    print("Odd")
+
+10.Print All Factors
+n=int(input())
+for i in range(1,n+1):
+    if n%i==0:
+        print(i,end=" ")
+
+11.Count of Factors
+n=int(input())
+count=0
+for i in range(1,n+1):
+    if n%i==0:
+        count=count+1
+print(count)
+    
+
+11.Prime Number detecter by its factors count
+n=int(input())
+c=0
+for i in range(1,n+1):
+    if n%i==0:
+        c=c+1
+if c==2:
+    print("Prime")
+else:
+    print("Not Prime")
+
+12. Student Grade Evaluator
+marks = int(input())
+
+if marks >= 90:
+    print("Grade A")
+elif marks >= 80:
+    print("Grade B")
+elif marks >= 70:
+    print("Grade C")
+elif marks >= 60:
+    print("Grade D")
+elif marks >= 50:
+    print("Grade E")
+else:
+    print("Fail")
+
+13. Armstrong Number
+n=int(input())
+c=0
+original=n
+while n != 0:
+    a=n%10
+    c=c+1
+    n=n//10
+n=original
+sum=0
+while n !=0:
+    a=n%10
+    sum=sum+(a**c)
+    n=n//10
+if (sum==original):
+    print("true")
+else:
+    print("false")
+
+14.Neon Number
+n=int(input())
+sum=0
+original=n
+n=n**2
+while n != 0:
+   
+    a=n%10
+    sum=sum+a
+    n=n//10
+if(sum==original):
+    print("true")
+else:
+    print("false")
+
+15.Automorphic Number
+n=int(input())
+original=n
+c=0
+while n != 0:
+    a=n%10
+    c=c+1
+    n=n//10
+n=original**2
+
+    
+a=n%(10**c)
+    
+if a==original:
+    print("Automorphic")
+else:
+    print("Not Automorphic")
+
+16. Harshad Number
+n=int(input())
+sum=0
+original=n
+while n != 0:
+    a=n%10
+    sum=sum+a
+    n=n//10
+if original%sum==0:
+    print("Harshad Number")
+else:
+    print("Not Harshad Number")
+

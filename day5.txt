@@ -1,9 +1,15 @@
 1. Digit Counter
-year = int(input())
-if (year % 4 == 0 and year % 100 != 0 ) or year % 400 == 0:
-    print("Leap Year")
+n=int(input())
+count=0
+n=abs(n)
+if n==0:
+    count=1
 else:
-    print("Not a Leap Year")
+    while n > 0 :
+        a=n%10
+        count=count+1
+        n=n//10
+print(count)
 
 2.Sum of digits
 n=int(input())
